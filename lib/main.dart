@@ -13,15 +13,19 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             // デフォルト表示
+<<<<<<< HEAD
             Text('Default'),
+=======
+            Text('Default!!'),
+>>>>>>> AddText
             // 太さを指定
-            Text('Bold', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text('Bold!!', style: TextStyle(fontWeight: FontWeight.bold)),
             // スタイルを指定
-            Text('Italic', style: TextStyle(fontStyle: FontStyle.italic)),
+            Text('Italic!!', style: TextStyle(fontStyle: FontStyle.italic)),
             // サイズを指定
-            Text('fontSize = 36', style: TextStyle(fontSize: 36)),
+            Text('fontSize!!', style: TextStyle(fontSize: 36)),
             // 色を指定
-            Text('Red', style: TextStyle(color: Colors.red)),
+            Text('Red!!', style: TextStyle(color: Colors.red)),
             Container(
               width: double.infinity,
               color: Colors.grey,
