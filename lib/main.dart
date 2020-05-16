@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             // デフォルト表示
+<<<<<<< HEAD
             Text('Default'),
+=======
+            Text('Default!!'),
+>>>>>>> AddText
             // 太さを指定
             Text('Bold', style: TextStyle(fontWeight: FontWeight.bold)),
             // スタイルを指定
