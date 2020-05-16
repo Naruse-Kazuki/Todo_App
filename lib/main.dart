@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             // スタイルを指定
             Text('Italic!!', style: TextStyle(fontStyle: FontStyle.italic)),
             // サイズを指定
-            Text('fontSize!!', style: TextStyle(fontSize: 36)),
+            Text('fontSize!! = 36', style: TextStyle(fontSize: 36)),
             // 色を指定
             Text('Red!!', style: TextStyle(color: Colors.red)),
             Container(
