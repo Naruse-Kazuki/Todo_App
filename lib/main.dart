@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               color: Colors.grey[200],
               child: Column(
                 children: <Widget>[
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               color: Colors.grey[200],
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               color: Colors.grey[200],
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
