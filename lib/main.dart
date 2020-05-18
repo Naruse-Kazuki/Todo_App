@@ -9,61 +9,89 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Container(
-                // 背景色
-                color: Colors.red,
-                child: Text('blue'),
+        body: Column(
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              height: 70,
+              color: Colors.grey[200],
+              child: Row(
+                // 横に並べる
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('first')),
+                  Container(color: Colors.blue, child: Text('second')),
+                  Container(color: Colors.green, child: Text('third')),
+                ],
               ),
-              Container(
-                // 横幅
-                width: 250,
-                // 縦幅
-                height: 100,
-                color: Colors.red,
-                child: Text('200x50'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 70,
+              child: Row(
+                // 中央寄せ
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('***')),
+                  Container(color: Colors.blue, child: Text('中央寄せ')),
+                  Container(color: Colors.green, child: Text('---')),
+                ],
               ),
-              Container(
-                // 内側の余白
-                padding: EdgeInsets.all(8),
-                color: Colors.red,
-                child: Text('padding'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 70,
+              color: Colors.grey[200],
+              child: Row(
+                // 右寄せ
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('***')),
+                  Container(color: Colors.blue, child: Text('右寄せ')),
+                  Container(color: Colors.green, child: Text('---')),
+                ],
               ),
-              Container(
-                color: Colors.red,
-                child: Container(
-                  // 外側の余白
-                  margin: EdgeInsets.all(8),
-                  color: Colors.blue,
-                  child: Text('margin'),
-                ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 70,
+              child: Row(
+                // 均等配置
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('***')),
+                  Container(color: Colors.blue, child: Text('均等配置')),
+                  Container(color: Colors.green, child: Text('---')),
+                ],
               ),
-              Container(
-                decoration: BoxDecoration(
-                  // 枠線
-                  border: Border.all(color: Colors.red, width: 2),
-                  // 角丸
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Text('border'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 70,
+              color: Colors.grey[200],
+              child: Row(
+                // 上寄せ
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('***')),
+                  Container(color: Colors.blue, child: Text('上寄せ')),
+                  Container(color: Colors.green, child: Text('---')),
+                ],
               ),
-              Container(
-                decoration: BoxDecoration(
-                  // 背景画像
-                  image: DecorationImage(
-                    image: NetworkImage('https://placehold.jp/200x100.png'),
-                  ),
-                ),
-                width: 200,
-                height: 100,
-                child: Text('image'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              child: Row(
+                // 下寄せ
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Container(color: Colors.red, child: Text('***')),
+                  Container(color: Colors.blue, child: Text('下寄せ')),
+                  Container(color: Colors.green, child: Text('---')),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
