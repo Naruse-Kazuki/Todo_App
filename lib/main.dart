@@ -9,61 +9,77 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Container(
-                // 背景色
-                color: Colors.red,
-                child: Text('blue'),
+        body: Column(
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              height: 100,
+              color: Colors.grey[200],
+              child: Column(
+                children: <Widget>[
+                  Text('first line'),
+                  Text('second line'),
+                ],
               ),
-              Container(
-                // 横幅
-                width: 250,
-                // 縦幅
-                height: 100,
-                color: Colors.red,
-                child: Text('200x50'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text('***'),
+                  Text('中央寄せ'),
+                ],
               ),
-              Container(
-                // 内側の余白
-                padding: EdgeInsets.all(8),
-                color: Colors.red,
-                child: Text('padding'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              color: Colors.grey[200],
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Text('***'),
+                  Text('下寄せ'),
+                ],
               ),
-              Container(
-                color: Colors.red,
-                child: Container(
-                  // 外側の余白
-                  margin: EdgeInsets.all(8),
-                  color: Colors.blue,
-                  child: Text('margin'),
-                ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text('***'),
+                  Text('均等に配置'),
+                ],
               ),
-              Container(
-                decoration: BoxDecoration(
-                  // 枠線
-                  border: Border.all(color: Colors.red, width: 2),
-                  // 角丸
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Text('border'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              color: Colors.grey[200],
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('***'),
+                  Text('左寄せ'),
+                ],
               ),
-              Container(
-                decoration: BoxDecoration(
-                  // 背景画像
-                  image: DecorationImage(
-                    image: NetworkImage('https://placehold.jp/200x100.png'),
-                  ),
-                ),
-                width: 200,
-                height: 100,
-                child: Text('image'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text('***'),
+                  Text('右寄せ'),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
