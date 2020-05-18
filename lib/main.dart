@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               child: Row(
                 // 下寄せ
                 crossAxisAlignment: CrossAxisAlignment.end,
