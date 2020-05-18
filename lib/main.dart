@@ -13,98 +13,48 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(top: 32),
-              child: Text('FlatButton'),
+              child: Text('IconButton'),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlatButton(
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                FlatButton(
+                IconButton(
                   onPressed: () {},
-                  child: Text('enabled'),
+                  icon: Icon(Icons.thumb_up),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                FlatButton(
-                  disabledColor: Colors.grey,
-                  disabledTextColor: Colors.white,
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                FlatButton(
-                  color: Colors.blue,
+                IconButton(
+                  color: Colors.pink,
                   onPressed: () {},
-                  child: Text('enabled'),
+                  icon: Icon(Icons.favorite),
+                ),
+                IconButton(
+                  iconSize: 64,
+                  onPressed: () {},
+                  icon: Icon(Icons.flight),
                 ),
               ],
             ),
             Container(
               padding: EdgeInsets.only(top: 32),
-              child: Text('OutlineButton'),
+              child: Text('アイコン＋テキスト'),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                OutlineButton(
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                OutlineButton(
+                FlatButton.icon(
                   onPressed: () {},
-                  child: Text('enabled'),
+                  icon: Icon(Icons.thumb_up),
+                  label: Text('Good'),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                OutlineButton(
-                  disabledBorderColor: Colors.red,
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                OutlineButton(
-                  borderSide: BorderSide(color: Colors.blue),
+                OutlineButton.icon(
                   onPressed: () {},
-                  child: Text('enabled'),
+                  icon: Icon(Icons.favorite, color: Colors.pink),
+                  label: Text('Like'),
                 ),
-              ],
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 32),
-              child: Text('RaisedButton'),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                RaisedButton(
+                RaisedButton.icon(
                   onPressed: () {},
-                  child: Text('enabled'),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton(
-                  elevation: 8,
-                  onPressed: null,
-                  child: Text('disabled'),
-                ),
-                RaisedButton(
-                  elevation: 8,
-                  onPressed: () {},
-                  child: Text('enabled'),
+                  icon: Icon(Icons.flight),
+                  label: Text('Flight'),
                 ),
               ],
             ),
