@@ -15,36 +15,36 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               Container(
                 // 背景色
-                color: Colors.blue,
+                color: Colors.red,
                 child: Text('blue'),
               ),
               Container(
                 // 横幅
-                width: 200,
+                width: 250,
                 // 縦幅
-                height: 50,
-                color: Colors.blue,
+                height: 100,
+                color: Colors.red,
                 child: Text('200x50'),
               ),
               Container(
                 // 内側の余白
                 padding: EdgeInsets.all(8),
-                color: Colors.blue,
+                color: Colors.red,
                 child: Text('padding'),
               ),
               Container(
-                color: Colors.blue,
+                color: Colors.red,
                 child: Container(
                   // 外側の余白
                   margin: EdgeInsets.all(8),
-                  color: Colors.green,
+                  color: Colors.blue,
                   child: Text('margin'),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
                   // 枠線
-                  border: Border.all(color: Colors.blue, width: 2),
+                  border: Border.all(color: Colors.red, width: 2),
                   // 角丸
                   borderRadius: BorderRadius.circular(8),
                 ),
