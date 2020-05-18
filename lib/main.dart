@@ -70,4 +70,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//developとのコンフリフトを修正
+//developとのコンフリフトを修正しました
