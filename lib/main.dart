@@ -12,84 +12,101 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: <Widget>[
             Container(
-              width: double.infinity,
-              height: 70,
-              color: Colors.grey[200],
-              child: Row(
-                // 横に並べる
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('first')),
-                  Container(color: Colors.blue, child: Text('second')),
-                  Container(color: Colors.green, child: Text('third')),
-                ],
-              ),
+              padding: EdgeInsets.only(top: 32),
+              child: Text('FlatButton'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlatButton(
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                FlatButton(
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlatButton(
+                  disabledColor: Colors.grey,
+                  disabledTextColor: Colors.white,
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                FlatButton(
+                  color: Colors.blue,
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
             ),
             Container(
-              width: double.infinity,
-              height: 70,
-              child: Row(
-                // 中央寄せ
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('***')),
-                  Container(color: Colors.blue, child: Text('中央寄せ')),
-                  Container(color: Colors.green, child: Text('---')),
-                ],
-              ),
+              padding: EdgeInsets.only(top: 32),
+              child: Text('OutlineButton'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                OutlineButton(
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                OutlineButton(
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                OutlineButton(
+                  disabledBorderColor: Colors.red,
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                OutlineButton(
+                  borderSide: BorderSide(color: Colors.blue),
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
             ),
             Container(
-              width: double.infinity,
-              height: 70,
-              color: Colors.grey[200],
-              child: Row(
-                // 右寄せ
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('***')),
-                  Container(color: Colors.blue, child: Text('右寄せ')),
-                  Container(color: Colors.green, child: Text('---')),
-                ],
-              ),
+              padding: EdgeInsets.only(top: 32),
+              child: Text('RaisedButton'),
             ),
-            Container(
-              width: double.infinity,
-              height: 70,
-              child: Row(
-                // 均等配置
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('***')),
-                  Container(color: Colors.blue, child: Text('均等配置')),
-                  Container(color: Colors.green, child: Text('---')),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
             ),
-            Container(
-              width: double.infinity,
-              height: 70,
-              color: Colors.grey[200],
-              child: Row(
-                // 上寄せ
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('***')),
-                  Container(color: Colors.blue, child: Text('上寄せ')),
-                  Container(color: Colors.green, child: Text('---')),
-                ],
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 100,
-              child: Row(
-                // 下寄せ
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  Container(color: Colors.red, child: Text('***')),
-                  Container(color: Colors.blue, child: Text('下寄せ')),
-                  Container(color: Colors.green, child: Text('---')),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RaisedButton(
+                  elevation: 8,
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                RaisedButton(
+                  elevation: 8,
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+              ],
             ),
           ],
         ),
