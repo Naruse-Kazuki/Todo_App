@@ -1,54 +1,37 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // 最初に表示するWidget
+  runApp(MyTodoApp());
+}
 
-class MyApp extends StatelessWidget {
+class MyTodoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      // 右上に表示される"debug"ラベルを消す
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: MyWidget(),
-        ),
+      // アプリ名
+      title: 'My Todo App',
+      theme: ThemeData(
+        // テーマカラー
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      // リスト一覧画面を表示
+      home: TodoListPage(),
     );
   }
 }
 
-// StatefulWidgetを継承するとStateを扱える
-// このWidgetを表示すると、Stateを元にUIが作成される
-class MyWidget extends StatefulWidget {
-  // 使用するStateを指定
-  @override
-  _MyWidgetState createState() => _MyWidgetState();
-}
-
-// Stateを継承して使う
-class _MyWidgetState extends State<MyWidget> {
-  // データを宣言
-  int count = 0;
-
-  // データを元にWidgetを作る
+// リスト一覧画面用Widget
+class TodoListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(count.toString()),
-        RaisedButton(
-          onPressed: () {
-            // データを更新する時は setState を呼ぶ
-            setState(() {
-              // データを更新
-              count = count + 1;
-            });
-          },
-          child: Text('カウントアップ'),
-        ),
-      ],
+    return Scaffold(
+      body: Center(
+        child: Text('リスト一覧画面'),
+      ),
     );
   }
 }
